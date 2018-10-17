@@ -5,13 +5,41 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
+<style type="text/css">
+  ion-content{
+    padding: auto;  }
+  input, button{
+    width: 100%;
+    max-width: 300px;
+  }
+  .inputs{
+    margin-bottom: 30px;
+  }
+</style>
 <ion-content>
   <ion-list>
     <ion-list-header>Follow us on Twitter</ion-list-header>
     <ion-item>
       <ion-icon name="ionic" item-start></ion-icon>
       @ionicframework
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Nome</ion-label>
+      <ion-input placeholder="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" fixed>Email</ion-label>
+      <ion-input type="tel" placeholder="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" fixed>Mensagem</ion-label>
+      <ion-input type="tel" placeholder="mensagem"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button click="enviarMensagem()" block (click)="enviarMensagem()"> enviar</button>
     </ion-item>
   </ion-list>
 </ion-content>
